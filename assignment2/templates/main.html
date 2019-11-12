@@ -1,0 +1,24 @@
+<html>
+<body>
+<form action="{% url 'save' %}" method="post">
+    {% csrf_token %}
+<table align="center" border="2">
+    <tr><td>first number:<input type="number" name="t1" min="0" required></td></tr>
+    <tr><td>second number:<input type="number" name="t2" min="0"  required></td></tr>
+    <tr><td><button type="submit" name="a1" value="add">add</button> </td></tr>
+     <tr><td><button type="submit" name="a1" value="sub">sub</button> </td></tr>
+     <tr><td><button type="submit" name="a1" value="mul">mul</button> </td></tr>
+     <tr><td><button type="submit" name="a1" value="div">div</button> </td></tr>
+    <tr>
+        <th>
+            {% if data %}:
+    {{ data }}
+    {% endif %}
+
+        </th>
+    </tr>
+
+</table>
+    </form>
+</body>
+</html>
